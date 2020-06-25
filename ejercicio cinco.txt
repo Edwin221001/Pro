@@ -1,0 +1,32 @@
+public class EJERCICIO {   
+    
+    static int[][] generaMatriz(int filas, int columnas){        
+        int[][] matriz=new int[filas][columnas];       
+        int f,c;                
+        for(f=0 ; f < matriz.length ; f++){           
+            for (c=0 ; c < matriz[f].length ; c++){                
+                matriz[f][c]=f*c;                
+            }           
+        }       
+        return matriz;
+    }
+    
+    static void imprimeMatriz(int[][] matriz){       
+        int filas, columnas;             
+        for (filas=0 ; filas < matriz.length ; filas++){            
+            for (columnas=0 ; columnas < matriz[filas].length ; columnas++){
+                
+                System.out.printf("%4d", matriz[columnas][filas]);               
+            }           
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        
+        int[][] matriz;     
+        
+        matriz=generaMatriz(10,10);
+        
+        imprimeMatriz(matriz);   
+    }
+}
